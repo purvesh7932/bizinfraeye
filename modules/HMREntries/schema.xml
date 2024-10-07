@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_hmrentries</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_hmrentries` (
+    `hmrentriesid` int(11) NOT NULL DEFAULT '0',
+      `hmr_value` INT(30) DEFAULT NULL,
+      PRIMARY KEY (`hmrentriesid`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_hmrentriescf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_hmrentriescf` (
+  `hmrentriesid` int(11) NOT NULL,
+  PRIMARY KEY (`hmrentriesid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

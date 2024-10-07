@@ -1,0 +1,55 @@
+/* *********************************************************************************
+ * The content of this file is subject to the ITS4YouInstaller license.
+ * ("License"); You may not use this file except in compliance with the License
+ * The Initial Developer of the Original Code is IT-Solutions4You s.r.o.
+ * Portions created by IT-Solutions4You s.r.o. are Copyright(C) IT-Solutions4You s.r.o.
+ * All Rights Reserved.
+ * ******************************************************************************* */
+
+.blog-header {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.m0550 {
+    margin: 0 5px 5px 0;
+}
+
+.packageInline {
+    display: inline-block;
+    width: 33.33%;
+    float: left;
+    font-size: 105%;
+}
+
+.extensionInline {
+    display: inline-block;
+    width: 25%;
+    float: left;
+    font-size: 105%;
+}
+
+.extension_container {
+    background: #fff;
+}
+
+#modulesShop .thumbnailImage {
+    float: none;
+    display: block;
+    max-height: 150px;
+    margin: 0 auto;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+}
+
+.extension_container {
+    margin: 10px;
+}
+#installedModules table tbody td {
+    border-left:none;
+    border-right:none;
+}
+
+
+

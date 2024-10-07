@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_discussionblog</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_discussionblog` (
+    `discussionblogid` int(11) NOT NULL DEFAULT '0',
+      `subject` VARCHAR(128) DEFAULT NULL,
+      PRIMARY KEY (`discussionblogid`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_discussionblogcf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_discussionblogcf` (
+  `discussionblogid` int(11) NOT NULL,
+  PRIMARY KEY (`discussionblogid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

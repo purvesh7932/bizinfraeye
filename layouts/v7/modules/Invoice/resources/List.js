@@ -1,0 +1,1 @@
+Inventory_List_Js("Invoice_List_Js",{},{});

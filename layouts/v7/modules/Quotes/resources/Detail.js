@@ -1,0 +1,1 @@
+Inventory_Detail_Js("Quotes_Detail_Js",{},{});

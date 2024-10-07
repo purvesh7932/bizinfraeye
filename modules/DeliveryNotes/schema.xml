@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_deliverynotes</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_deliverynotes` (
+    `deliverynotesid` int(11) NOT NULL DEFAULT '0',
+      `deliveynotessapref` VARCHAR(150) DEFAULT NULL,
+      PRIMARY KEY (`deliverynotesid`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_deliverynotescf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_deliverynotescf` (
+  `deliverynotesid` int(11) NOT NULL,
+  PRIMARY KEY (`deliverynotesid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

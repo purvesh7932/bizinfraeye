@@ -1,0 +1,4 @@
+<?php
+class RecommissioningReports_DetailRecordStructure_Model extends ServiceReports_DetailRecordStructure_Model {
+
+}

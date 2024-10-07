@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_maintenanceplant</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_maintenanceplant` (
+    `maintenanceplantid` int(11) NOT NULL DEFAULT '0',
+      `plant_name` VARCHAR(128) DEFAULT NULL,
+    `plant_code` VARCHAR(128) DEFAULT NULL,
+      PRIMARY KEY (`maintenanceplantid`),
+      CONSTRAINT `vtiger_maintenanceplant_ibfk_1` FOREIGN KEY (`maintenanceplantid`) REFERENCES `vtiger_crmentity` (`crmid`) ON DELETE CASCADE
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_maintenanceplantcf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_maintenanceplantcf` (
+  `maintenanceplantid` int(11) NOT NULL,
+  PRIMARY KEY (`maintenanceplantid`),
+  CONSTRAINT `vtiger_maintenanceplantcf_ibfk_1` FOREIGN KEY (`maintenanceplantid`) REFERENCES `vtiger_maintenanceplant` (`maintenanceplantid`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

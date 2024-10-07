@@ -1,0 +1,39 @@
+<?php
+require_once('include/utils/utils.php');
+require_once('include/logging.php');
+require_once("modules/Emails/class.smtp.php");
+require_once("modules/Emails/class.phpmailer.php");
+require_once 'include/utils/CommonUtils.php';
+require_once 'include/utils/VTCacheUtils.php';
+
+global $adb, $log;
+global $upload_badext;
+$adb = PearDatabase::getInstance();
+$campaignidQuery = "SELECT * FROM vtiger_campaign INNER JOIN vtiger_crmentity ON vtiger_crmentity.crmid = vtiger_campaign.campaignid WHERE vtiger_crmentity.deleted = 0";
+
+$result = $adb->pquery($campaignidQuery, array());
+$no_of_campaign = $adb->num_rows($result);
+
+for($i=0; $i<$no_of_campaign;$i++) {
+    $campaign_id = $adb->query_result($result, $i, 'campaignid');
+    $subject = $adb->query_result($result, $i, 'campaignname');
+
+    $getrelatedleadid ="SELECT * FROM `campaigns_leads_sendmail` INNER JOIN vtiger_campaign ON vtiger_campaign.campaignid = campaigns_leads_sendmail.campaignid INNER JOIN vtiger_leaddetails ON vtiger_leaddetails.leadid = campaigns_leads_sendmail.leadid WHERE campaigns_leads_sendmail.campaignid = ? AND  campaigns_leads_sendmail.sendmail = 0";
+    $result2 = $adb->pquery($getrelatedleadid, array($campaign_id)); 
+    $no_of_lead = $adb->num_rows($result2);
+   
+    for($j=0; $j<$no_of_lead;$j++) {
+        $leadid = $adb->query_result($result2, $j, 'leadid');
+        $email = $adb->query_result($result2, $j, 'email');
+		//$subject = "demo mail";
+		$body= "this is a testing mail";
+
+		$status = send_mail("Support",$email,$HELPDESK_SUPPORT_NAME,$HELPDESK_SUPPORT_EMAIL_ID,$subject,$body,'',$HELPDESK_SUPPORT_EMAIL_ID);
+	
+		$updatequarylead = "UPDATE campaigns_leads_sendmail SET sendmail=1 WHERE leadid=?";
+		$result3 = $adb->pquery($updatequarylead, array($leadid));
+
+    }
+}
+	
+?>

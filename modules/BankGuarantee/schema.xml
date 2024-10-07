@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_bankguarantee</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_bankguarantee` (
+    `bankguaranteeid` int(11) NOT NULL DEFAULT '0',
+      `equipment_model` VARCHAR(128) DEFAULT NULL,
+      PRIMARY KEY (`bankguaranteeid`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_bankguaranteecf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_bankguaranteecf` (
+  `bankguaranteeid` int(11) NOT NULL,
+  PRIMARY KEY (`bankguaranteeid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

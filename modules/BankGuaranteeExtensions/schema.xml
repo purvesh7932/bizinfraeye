@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_bankguaranteeextensions</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_bankguaranteeextensions` (
+    `bankguaranteeextensionsid` int(11) NOT NULL DEFAULT '0',
+      `bg_ext_startdate` DATE DEFAULT NULL,
+    `bg_ext_enddate` DATE DEFAULT NULL,
+      PRIMARY KEY (`bankguaranteeextensionsid`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_bankguaranteeextensionscf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_bankguaranteeextensionscf` (
+  `bankguaranteeextensionsid` int(11) NOT NULL,
+  PRIMARY KEY (`bankguaranteeextensionsid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

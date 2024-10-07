@@ -1,0 +1,3 @@
+<?php
+
+class StockTransferOrders_MassEditRecordStructure_Model extends Inventory_MassEditRecordStructure_Model {}

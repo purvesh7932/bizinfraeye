@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_modelandaggregates</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_modelandaggregates` (
+    `modelandaggregatesid` int(11) NOT NULL DEFAULT '0',
+      `eq_sr_equip_model` VARCHAR(128) DEFAULT NULL,
+    `masn_aggrregate` VARCHAR(128) DEFAULT NULL,
+      PRIMARY KEY (`modelandaggregatesid`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_modelandaggregatescf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_modelandaggregatescf` (
+  `modelandaggregatesid` int(11) NOT NULL,
+  PRIMARY KEY (`modelandaggregatesid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

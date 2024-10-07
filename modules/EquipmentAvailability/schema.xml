@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_equipmentavailability</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_equipmentavailability` (
+    `equipmentavailabilityid` int(11) NOT NULL DEFAULT '0',
+      `equi_avail_percent` VARCHAR(128) DEFAULT NULL,
+      PRIMARY KEY (`equipmentavailabilityid`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_equipmentavailabilitycf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_equipmentavailabilitycf` (
+  `equipmentavailabilityid` int(11) NOT NULL,
+  PRIMARY KEY (`equipmentavailabilityid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

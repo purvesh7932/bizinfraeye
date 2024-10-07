@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_callassistance</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_callassistance` (
+    `callassistanceid` int(11) NOT NULL DEFAULT '0',
+      `call_assitance` VARCHAR(128) DEFAULT NULL,
+      PRIMARY KEY (`callassistanceid`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_callassistancecf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_callassistancecf` (
+  `callassistanceid` int(11) NOT NULL,
+  PRIMARY KEY (`callassistanceid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

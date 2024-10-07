@@ -1,0 +1,1 @@
+Inventory_Detail_Js("HelpDesk_Detail_Js",{},{});

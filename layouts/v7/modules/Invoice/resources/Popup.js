@@ -1,0 +1,1 @@
+Inventory_Popup_Js('Invoice_Popup_Js', {}, {});

@@ -1,0 +1,80 @@
+<?php
+/*+**********************************************************************************
+ * The contents of this file are subject to the vtiger CRM Public License Version 1.0
+ * ("License"); You may not use this file except in compliance with the License
+ * The Original Code is:  vtiger CRM Open Source
+ * The Initial Developer of the Original Code is vtiger.
+ * Portions created by vtiger are Copyright (C) vtiger.
+ * All Rights Reserved.
+ ************************************************************************************/
+
+$languageStrings = array(
+	'ServiceReport' => '',
+	'SINGLE_ServiceReport' => '',
+	'DATA REPORTING' => '',
+	'SYSTEM INFORMATION' => '',
+	'REGION' => '',
+	'CUSTOMER' => '',
+	'EQUIPMENT' => '',
+	'WARRANTY STATUS' => '',
+	'FAILURE DETAILS' => '',
+	'RECOMMISSIONING DETAILS' => '',
+	'FAILED PARTS MANAGEMENT' => '',
+	'LBL_FAILURE_INVESTIGATION' => '',
+	'LBL_PROJECT' => '',
+	'LBL_WARRANTY_STATUS' => '',
+	'LBL_EQUI_MODEL' => '',
+	'LBL_BUSINESS_AREA' => '',
+	'LBL_RECOMMISSIONING_REMARKS' => '',
+	'LBL_DISTRICT_OFFICE' => '',
+	'LBL_REPORT' => '',
+	'LBL_DISPATCHED_TO' => '',
+	'LBL_FAILED_PART_DESPATCHE_DIV' => '',
+	'LBL_TYPE_OF_CONTRACT' => '',
+	'LBL_FAILURE_ON_AC_OF' => '',
+	'LBL_ACTUAL_RECOMMISIONING' => '',
+	'LBL_REGIONAL_OFFICE' => '',
+	'LBL_EQPT_DOC' => '',
+	'LBL_CONTRACT_START' => '',
+	'LBL_TICKET_ID' => '',
+	'LBL_REP_SUPLY_STATUS' => '',
+	'LBL_FAILURE_HMR' => '',
+	'LBL_HMR_DATE' => '',
+	'LBL_PROJECT_AREA' => '',
+	'LBL_CUSTOMER_TYPE' => '',
+	'LBL_GC_DETAILS' => '',
+	'LBL_SER_OR_DIST_MANAGER' => '',
+	'LBL_EQUIPMENT_SL_NO' => '',
+	'LBL_REGIONAL_MANAGER' => '',
+	'LBL_CONTRACT_END' => '',
+	'LBL_FAILED_PARTS_DESPAHED_ON' => '',
+	'LBL_CUSTOMER_HQ' => '',
+	'LBL_CURRENT_EQPT_STATUS' => '',
+	'LBL_REMARKS_AFT_INV' => '',
+	'LBL_RUN_YEAR_OF_CONTRAT' => '',
+	'LBL_RECIEPT_AT_DEVISION' => '',
+	'LBL_NO_OF_DAY_DOWN' => '',
+	'LBL_EQPUIT_LOCATION' => '',
+	'LBL_CURRENT_SERVICE_STATUS' => '',
+	'LBL_SETOR' => '',
+	'LBL_NATURE_OF_FAILURE' => '',
+	'LBL_RECIEPT_AT_DEVISION_ON' => '',
+	'LBL_ACTION_TAKEN' => '',
+	'LBL_DEVISION' => '',
+	'LBL_TYPE_OF_DAMAGE' => '',
+	'LBL_SYSTEM_AFFECTED' => '',
+	'LBL_AGGREGATE_WARRANTY_APP' => '',
+	'LBL_AGGREGATE' => '',
+	'LBL_DATE_OF_FAILURE' => '',
+	'LBL_DAMAGE' => '',
+	'LBL_AGGREGATE_HOURS_WORKED' => '',
+	'LBL_VENDORS' => '',
+	'LBL_PARTS_PERTAINS_TO' => '',
+	'LBL_IF_OTHER_VENDOR' => '',
+	'LBL_RECOMMISSIONING_PDC' => '',
+	'LBL_AGGREGATE_WTY_TERMS' => '',
+	'LBL_EQPT_WARRANTY_TERMS' => '',
+
+);
+
+?>

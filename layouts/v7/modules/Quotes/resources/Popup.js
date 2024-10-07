@@ -1,0 +1,1 @@
+Inventory_Popup_Js('Quotes_Popup_Js', {}, {});

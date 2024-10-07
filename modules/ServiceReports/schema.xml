@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_servicereports</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_servicereports` (
+  `servicereportsid` int(19) NOT NULL,
+  `creditnote_name` varchar(100) DEFAULT NULL,
+  `creditnote_status` varchar(255) DEFAULT NULL,
+  `account_id` int(19) DEFAULT NULL,
+  `contact_id` int(19) DEFAULT NULL,
+  `applied_credits` decimal(25,8) DEFAULT '0.00000000',
+  `balance` decimal(25,8) DEFAULT '0.00000000',
+  `adjustment` decimal(25,8) DEFAULT NULL,
+  `discount_percent` decimal(25,3) DEFAULT NULL,
+  `discount_amount` decimal(25,3) DEFAULT NULL,
+  `s_h_amount` decimal(25,8) DEFAULT NULL,
+  `s_h_percent` decimal(7,3) DEFAULT NULL,
+  `region_id` int(19) DEFAULT NULL,
+  `total` decimal(25,8) DEFAULT NULL,
+  `taxtype` varchar(25) DEFAULT NULL,
+  `subtotal` decimal(25,8) DEFAULT NULL,
+  `currency_id` int(19) DEFAULT NULL,
+  `conversion_rate` decimal(12,5) DEFAULT NULL,
+  `pre_tax_total` decimal(25,8) DEFAULT NULL,
+  `compound_taxes_info` text,
+  `creditnote_no` varchar(100) DEFAULT NULL,
+  `applied_refund` decimal(25,8) DEFAULT '0.00000000',
+  `terms_conditions` text,
+  PRIMARY KEY (`servicereportsid`),
+  CONSTRAINT `vtiger_debitnotes_ibfk_1` FOREIGN KEY (`servicereportsid`) REFERENCES `vtiger_crmentity` (`crmid`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_servicereportscf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_servicereportscf` (
+  `servicereportsid` int(19) NOT NULL,
+  PRIMARY KEY (`servicereportsid`),
+  CONSTRAINT `vtiger_debitnotescf_ibfk_1` FOREIGN KEY (`servicereportsid`) REFERENCES `vtiger_servicereports` (`servicereportsid`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

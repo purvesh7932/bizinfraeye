@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_serviceengineer</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_serviceengineer` (
+    `serviceengineerid` int(11) NOT NULL DEFAULT '0',
+      `service_engineer_name` VARCHAR(128) DEFAULT NULL,
+      PRIMARY KEY (`serviceengineerid`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_serviceengineercf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_serviceengineercf` (
+  `serviceengineerid` int(11) NOT NULL,
+  PRIMARY KEY (`serviceengineerid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

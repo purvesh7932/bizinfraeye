@@ -1,0 +1,22 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_modelaggregateconfig</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_modelaggregateconfig` (
+    `modelaggregateconfigid` int(11) NOT NULL DEFAULT '0',
+      `eq_sr_equip_model_config` VARCHAR(128) DEFAULT NULL,
+      PRIMARY KEY (`modelaggregateconfigid`),
+      CONSTRAINT `vtiger_modelaggregateconfig_ibfk_1` FOREIGN KEY (`modelaggregateconfigid`) REFERENCES `vtiger_crmentity` (`crmid`) ON DELETE CASCADE
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_modelaggregateconfigcf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_modelaggregateconfigcf` (
+  `modelaggregateconfigid` int(11) NOT NULL,
+  PRIMARY KEY (`modelaggregateconfigid`),
+  CONSTRAINT `vtiger_modelaggregateconfigcf_ibfk_1` FOREIGN KEY (`modelaggregateconfigid`) REFERENCES `vtiger_modelaggregateconfig` (`modelaggregateconfigid`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>
